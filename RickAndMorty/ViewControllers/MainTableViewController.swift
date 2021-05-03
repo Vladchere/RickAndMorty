@@ -15,6 +15,16 @@ class MainTableViewController: UITableViewController {
 	// MARK: -Private properties
 	private let url = "https://rickandmortyapi.com/api/character"
 
+	private let searchController = UISearchController(searchResultsController: nil)
+	private var firlteredCharacter: [Result] = []
+	private var searchBarIsEmpty: Bool {
+		guard let text = searchController.searchBar.text else { return false }
+		return text.isEmpty
+	}
+	private var isFiltering: Bool {
+		return searchController.isActive && !searchBarIsEmpty
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
