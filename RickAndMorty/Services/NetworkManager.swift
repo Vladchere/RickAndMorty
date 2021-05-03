@@ -11,7 +11,7 @@ class NetworkManager {
 	static let shared = NetworkManager()
 	init() {}
 
-	func getAllCharacters(stringUrl: String, with completion: @escaping (Character) -> Void) {
+	func getCharacter(stringUrl: String, with completion: @escaping (Character) -> Void) {
 		guard let url = URL(string: stringUrl) else { return }
 
 		URLSession.shared.dataTask(with: url) { (data, response, error) in

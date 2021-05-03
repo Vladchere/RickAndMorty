@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="A7O-rc-sj8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="A7O-rc-sj8" customClass="MainTableViewCell" customModule="RickAndMorty" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A7O-rc-sj8" id="0iI-gi-03L">
@@ -48,6 +48,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="characterImageView" destination="hri-Np-CTL" id="gwg-KQ-Xwc"/>
+                                    <outlet property="nameLabel" destination="yzW-7D-Y5k" id="NKp-zQ-PZ3"/>
                                     <segue destination="OFq-sp-oOj" kind="show" identifier="showDetail" id="ezv-a2-gss"/>
                                 </connections>
                             </tableViewCell>

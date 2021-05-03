@@ -9,40 +9,40 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-	//MARK: Private properties
+	// MARK: -Public properties
+	var character: Character?
+
+	// MARK: -Private properties
 	private let url = "https://rickandmortyapi.com/api/character"
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		NetworkManager.shared.getAllCharacters(stringUrl: url) { (charecters) in
+		tableView.rowHeight = 100
+
+		NetworkManager.shared.getCharacter(stringUrl: url) { (character) in
 			DispatchQueue.main.async {
-				print(charecters)
+				self.character = character
+				self.tableView.reloadData()
+				print(character.results?.count ?? 0)
 			}
 		}
 	}
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+		return character?.results?.count ?? 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainTableViewCell
 
-        // Configure the cell...
+		if let result = character?.results?[indexPath.row] {
+			cell.configure(with: result)
+		}
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
