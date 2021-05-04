@@ -10,7 +10,9 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
 
 	// MARK: -IBOutlets
-	@IBOutlet var characterImageView: UIImageView!{
+
+	@IBOutlet var nameLabel: UILabel!
+	@IBOutlet var characterImageView: ImageView! {
 		didSet {
 			characterImageView.contentMode = .scaleAspectFit
 			characterImageView.clipsToBounds = true
@@ -18,20 +20,11 @@ class MainTableViewCell: UITableViewCell {
 			characterImageView.backgroundColor = .white
 		}
 	}
-	@IBOutlet var nameLabel: UILabel!
+
 
 	// MARK: - Public methods
 	func configure(with result: Result) {
 		nameLabel.text = result.name
-
-		DispatchQueue.main.async {
-			guard let strinURL = result.image else {return}
-			guard let imageURL = URL(string: strinURL) else {return}
-			guard let imageData = try? Data(contentsOf: imageURL) else {return}
-
-			DispatchQueue.main.async {
-				self.characterImageView.image = UIImage(data: imageData)
-			}
-		}
+		characterImageView.fetchImage(from: result.image ?? "")
 	}
 }

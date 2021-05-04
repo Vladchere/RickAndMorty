@@ -10,7 +10,8 @@ import UIKit
 class DetailViewController: UIViewController {
 
 	// MARK: - IBOutlets
-	@IBOutlet weak var characterImageView: UIImageView!
+	@IBOutlet weak var characterImageView: ImageView!
+
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var statusLabel: UILabel!
 	@IBOutlet weak var speciesLabel: UILabel!
@@ -25,19 +26,7 @@ class DetailViewController: UIViewController {
 		super.viewDidLoad()
 
 		setupLabels()
-		setupImage()
-	}
-
-	private func setupImage() {
-		DispatchQueue.main.async {
-			guard let strinURL = self.chracter.image else {return}
-			guard let imageURL = URL(string: strinURL) else {return}
-			guard let imageData = try? Data(contentsOf: imageURL) else {return}
-
-			DispatchQueue.main.async {
-				self.characterImageView.image = UIImage(data: imageData)
-			}
-		}
+		characterImageView.fetchImage(from: chracter.image ?? "")
 	}
 
 	private func setupLabels() {

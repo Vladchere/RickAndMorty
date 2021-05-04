@@ -48,7 +48,9 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainTableViewCell
 
 		if let result = isFiltering ? firlteredCharacter[indexPath.row] : character?.results?[indexPath.row] {
-			cell.configure(with: result)
+			DispatchQueue.main.async {
+				cell.configure(with: result)
+			}
 		}
 
         return cell
@@ -72,7 +74,7 @@ class MainTableViewController: UITableViewController {
 		definesPresentationContext = true
 
 		if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
-			textField.textColor = .black
+			textField.textColor = .white
 		}
 	}
 }
