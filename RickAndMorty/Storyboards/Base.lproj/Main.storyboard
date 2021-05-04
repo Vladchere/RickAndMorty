@@ -50,7 +50,7 @@
                                 <connections>
                                     <outlet property="characterImageView" destination="hri-Np-CTL" id="gwg-KQ-Xwc"/>
                                     <outlet property="nameLabel" destination="yzW-7D-Y5k" id="NKp-zQ-PZ3"/>
-                                    <segue destination="OFq-sp-oOj" kind="show" identifier="showDetail" id="ezv-a2-gss"/>
+                                    <segue destination="OFq-sp-oOj" kind="show" identifier="" id="ezv-a2-gss"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -134,6 +134,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="edd-kO-GT0"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="OCK-iC-VQP" id="uv6-S7-uM2"/>
+                        <outlet property="genderLabel" destination="dkh-HO-Ohb" id="AIv-pC-y9I"/>
+                        <outlet property="locationLabel" destination="0e9-VZ-m1r" id="GYI-iD-2np"/>
+                        <outlet property="nameLabel" destination="h7m-VO-V7y" id="ZQI-EF-Ajo"/>
+                        <outlet property="originLabel" destination="4Fg-Zh-gJi" id="J4d-8c-jlu"/>
+                        <outlet property="speciesLabel" destination="85A-ib-Jub" id="PWH-Pl-BEZ"/>
+                        <outlet property="statusLabel" destination="sWz-Ac-tG2" id="BJd-xM-uY7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPU-Ir-LpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

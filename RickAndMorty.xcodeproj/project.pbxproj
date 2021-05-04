@@ -16,6 +16,7 @@
 		86394A9C263DAEB800F7341B /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86394A9B263DAEB800F7341B /* MainTableViewController.swift */; };
 		86394AA5263DB51300F7341B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86394AA4263DB51300F7341B /* Character.swift */; };
 		86394AAE263DB72B00F7341B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86394AAD263DB72B00F7341B /* NetworkManager.swift */; };
+		8644A30B2641BC2600AC1AFF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644A30A2641BC2600AC1AFF /* ImageView.swift */; };
 		864C4815264048D000E136FE /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C4814264048D000E136FE /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		86394A9B263DAEB800F7341B /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		86394AA4263DB51300F7341B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		86394AAD263DB72B00F7341B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8644A30A2641BC2600AC1AFF /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		864C4814264048D000E136FE /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				864C4814264048D000E136FE /* MainTableViewCell.swift */,
+				8644A30A2641BC2600AC1AFF /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8644A30B2641BC2600AC1AFF /* ImageView.swift in Sources */,
 				86394AAE263DB72B00F7341B /* NetworkManager.swift in Sources */,
 				86394A9C263DAEB800F7341B /* MainTableViewController.swift in Sources */,
 				86004CC5263B114B00FC32E4 /* DetailViewController.swift in Sources */,
